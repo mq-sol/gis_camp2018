@@ -20,13 +20,13 @@
       var map = L.map('mapid').setView([36.0229603,139.7422343], 16);
 
       var baseMaps = {
-        osm: L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        osm: L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
         maxZoom: 18,
         attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, '
       }).addTo(map)};
 
       var overlayMaps = { 
-        overlay: L.tileLayer('http://sugito.code4saitama.org/tiles/sugito_20170204/{z}/{x}/{y}.png', {
+        overlay: L.tileLayer('https://sugito.code4saitama.org/tiles/sugito_20170204/{z}/{x}/{y}.png', {
         maxZoom: 22,
         minZoom: 16,
       }).addTo(map)};
