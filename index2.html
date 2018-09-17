@@ -31,41 +31,23 @@ var ort = L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/ort/{z}/{x}/{y}.jpg'
 	//minZoom: 14,
 	maxZoom: 18
 });
+
 var googleSat = L.tileLayer('https://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',{
     maxZoom: 20,
     subdomains:['mt0','mt1','mt2','mt3']
 });
-var drone = L.tileLayer('https://sugito.code4saitama.org/tiles/sugito_20170203/{z}/{x}/{y}.png', {
-	minZoom: 16,
-	maxZoom: 22
-});
 
-var drone2 = L.tileLayer('https://sugito.code4saitama.org/tiles/sugito_20170203_02/{z}/{x}/{y}.png', {
-	minZoom: 16,
-	maxZoom: 22
-});
-
-var drone3 = L.tileLayer('https://sugito.code4saitama.org/tiles/sugito_20170204/{z}/{x}/{y}.png', {
-	minZoom: 16,
-	maxZoom: 22
-});
-
-var drone4 = L.tileLayer('https://sugito.code4saitama.org/tiles/shiraishi/{z}/{x}/{y}.png', {
-	minZoom: 16,
-	maxZoom: 22
-});
-
-var drone5 = L.tileLayer('https://sugito.code4saitama.org/tiles/sugito20180203/{z}/{x}/{y}.png', {
+var drone = L.tileLayer('https://sugito.code4saitama.org/tiles/sugito20180203/{z}/{x}/{y}.png', {
 	minZoom: 16,
 	maxZoom: 22
 }).addTo(map);
 
 // Define a style
 var myStyle = {
-        "color": "#ff7800",
-        "weight": 5,
-        "opacity": 0.65
-    };
+    "color": "#ff7800",
+    "weight": 5,
+    "opacity": 0.65
+};
 
 var baseMaps = {
     "地理院地図": gsi,
@@ -74,9 +56,7 @@ var baseMaps = {
 };
 
 var overlayMaps = {
-    "ドローン(被災前想定) ": drone,
-    "ドローン(被災後想定)": drone2,
-    "ドローン(2018-02-03)": drone5,
+    "ドローン(2018-02-03)": drone,
 };
 
 L.control.layers(baseMaps, overlayMaps).addTo(map);
